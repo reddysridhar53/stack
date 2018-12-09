@@ -216,7 +216,7 @@
     const loaddata = () => {
         container.innerHTML = '';
         let stringified = localStorage.getItem('list');
-        let listitems = JSON.parse(stringified);
+        let listitems = JSON.parse(stringified) || [];
         listitems.forEach((item, index) => {
             constructItem(index, item);
         })
